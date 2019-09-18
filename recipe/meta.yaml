@@ -1,0 +1,40 @@
+{% set name = "wxmplot" %}
+{% set version = "0.9.38" %}
+{% set file_ext = "tar.gz" %}
+{% set sha256 = "82dc64abb42bdd03ec7067a3aa2a475001f2bc8e4772149bae47facf460c0081" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ file_ext }}
+  sha256: {{ sha256 }}
+
+build:
+  noarch: python
+  number: 0
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+
+requirements:
+  build:
+    - python
+    - pip
+  run:
+    - python
+    - matplotlib >=2.0
+    - numpy >=1.12
+    - six >=1.10
+    - wxpython >=4.0.3
+
+test:
+  imports:
+    - wxmplot
+
+about:
+  home: http://newville.github.io/wxmplot
+  license: MIT
+  license_file: LICENSE
+  summary: wxPython plotting widgets using matplotlib
+  doc_url: http://newville.github.io/wxmplot
+  dev_url: https://github.com/newville/wxmplot

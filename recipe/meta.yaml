@@ -1,20 +1,19 @@
 {% set name = "wxmplot" %}
-{% set version = "0.9.38" %}
-{% set file_ext = "tar.gz" %}
-{% set sha256 = "82dc64abb42bdd03ec7067a3aa2a475001f2bc8e4772149bae47facf460c0081" %}
+{% set version = "0.9.41" %}
+{% set sha256 = "74ec91c954a932cfa7840eb5a845a761d559e2bfe68e176352aa3674c1a25c29" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ file_ext }}
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   build:

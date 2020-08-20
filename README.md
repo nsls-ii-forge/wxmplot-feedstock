@@ -5,7 +5,7 @@ Home: http://newville.github.io/wxmplot
 
 Package license: MIT
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: wxPython plotting widgets using matplotlib
 

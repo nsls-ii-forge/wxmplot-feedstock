@@ -1,6 +1,6 @@
 {% set name = "wxmplot" %}
-{% set version = "0.9.41" %}
-{% set sha256 = "74ec91c954a932cfa7840eb5a845a761d559e2bfe68e176352aa3674c1a25c29" %}
+{% set version = "0.9.42" %}
+{% set sha256 = "2214854dc65b756c8b024e6d49001ca5b15d48ffebdb7a9334b8a181c9b899ba" %}
 
 package:
   name: {{ name|lower }}
